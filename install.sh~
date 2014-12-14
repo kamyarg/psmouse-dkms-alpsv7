@@ -10,7 +10,7 @@ if [ "$EUID" -ne 0 ]; then
    exit
 fi
 
-MDIR="/lib/modules/$(uname -r)"
+MDIR="/usr/lib/modules/$(uname -r)"
 if [ ! -d "$MDIR" ]; then
     MDIR="/lib/modules/$(uname -r)"
     if [ ! -d "$MDIR"]; then
